@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <style>
+        #reaction {
+            display: flex;
+            margin-top: 10px;
+            margin-left: -10px;
+
+
+        }
+
+        #extraBox {
+            background-color: red;
+            max-width: 600px;
+            margin-top: 4px;
+            justify-content: space-between;
+            display: flex;
+            border-radius: 20px;
+            padding: 8px;
+
+        }
+
+        #otherfunction {
+            margin-top: 15px;
+            border: 1px solid white;
+        }
+        
+        #msgBox {
+            
+            background-color: aqua;
+            border-radius: 20px;
+            max-width: 700px;
+        }
+        
+        #msgBoxHeader {
+            height: 60px;
+            border-radius: 20px;
+            max-width: 700px;
+        }
+        #outermessageBox{
+           border-radius: 20px;
+           max-width: 700px;
+
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+    <div id="hello">
+
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let arr =[20,30]
+
+        document.getElementById("delete").addEventListener("click", function (e) {
+            console.log(e);
+
+        })
+        document.getElementById("laugh").addEventListener("click", function (e) {
+            let count = 1;
+            document.getElementById("reactionNumber1").innerHTML = count;
+            ++count;
+        })
+
+        document.getElementById("smile").addEventListener("click", function (e) {
+            let count = 1;
+            document.getElementById("reactionNumber2").innerHTML = `${arr[0]}`;
+            ++count;
+        })
+        document.getElementById("love").addEventListener("click", function (e) {
+            let count = 1;
+            document.getElementById("reactionNumber3").innerHTML = count;
+            ++count;
+        })
+        document.getElementById("cry").addEventListener("click", function (e) {
+            let count = 1;
+            document.getElementById("reactionNumber4").innerHTML = count;
+            ++count;
+        })
+
+
+        document.getElementById("hello").innerHTML = `<div class="toast show" style="width: 600px ;" id="outermessageBox">
+
+        <div class="toast-header" id="msgBoxHeader">
+
+            <strong class="me-auto">Aayush</strong>
+
+            <small>date</small>
+        </div>
+
+        <div class="toast-body" id="msgBox">
+           ${alpha}
+            
+        </div>
+
+    </div>
+
+    <div id="extraBox">
+
+        <div id="reaction">
+
+            <div>
+                <button type="button" class="btn position-relative " id="laugh">
+                    <span class="fs-3">😂</span>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        id="reactionNumber1">
+                        0
+
+                    </span>
+                </button>
+
+            </div>
+            <div>
+                <button type="button" class="btn  position-relative border-1" id="smile">
+                    <span class="fs-3">☺️</span>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        id="reactionNumber2">
+                        0
+
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button type="button" class="btn  position-relative" id="love">
+                    <span class="fs-3">❤️</span>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        id="reactionNumber3">
+                        0
+
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button type="button" class="btn  position-relative" id="cry">
+                    <span class="fs-3">😭</span>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        id="reactionNumber4">
+                        0
+
+                    </span>
+                </button>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="btn-group" id="otherfunction">
+                <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static"
+                    aria-expanded="false">
+                    Other operation
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                    <li><button class="dropdown-item" type="button" id="delete">Delete Message</button></li>
+                    <li><button class="dropdown-item" type="button">Update Message</button></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>`
+
+    </script>
+
+
+</body>
+
+</html>
